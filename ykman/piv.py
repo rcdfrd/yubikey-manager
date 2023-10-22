@@ -457,6 +457,8 @@ def get_piv_info(session: PivSession) -> str:
 
     try:
         chuid = session.get_object(OBJECT_ID.CHUID).hex()
+    except Exception:
+        chuid = "No data available."
     except ApduError as e:
         if e.sw == SW.FILE_NOT_FOUND:
             chuid = "No data available."
@@ -464,6 +466,8 @@ def get_piv_info(session: PivSession) -> str:
 
     try:
         ccc = session.get_object(OBJECT_ID.CAPABILITY).hex()
+    except Exception:
+        ccc = "No data available."
     except ApduError as e:
         if e.sw == SW.FILE_NOT_FOUND:
             ccc = "No data available."
