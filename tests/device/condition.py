@@ -1,4 +1,4 @@
-from ykman.device import is_fips_version
+from ckman.device import is_fips_version
 from inspect import signature, Parameter, isgeneratorfunction
 from makefun import wraps
 

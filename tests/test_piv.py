@@ -1,4 +1,4 @@
-from ykman.piv import generate_random_management_key, parse_rfc4514_string
+from ckman.piv import generate_random_management_key, parse_rfc4514_string
 
 from yubikit.core import NotSupportedError, Version
 from yubikit.piv import (

@@ -8,7 +8,7 @@ from yubikit.yubiotp import (
     StaticPasswordSlotConfiguration,
 )
 from yubikit.management import CAPABILITY, ManagementSession
-from ykman.device import connect_to_device
+from ckman.device import connect_to_device
 from . import condition
 import pytest
 

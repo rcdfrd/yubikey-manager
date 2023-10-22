@@ -81,7 +81,7 @@ class _YkmanGroup(click.Group):
         )
 
 
-def ykman_group(
+def ckman_group(
     connections=[SmartCardConnection, OtpConnection, FidoConnection], *args, **kwargs
 ):
     if not isinstance(connections, list):
@@ -94,7 +94,7 @@ def ykman_group(
     )  # type: ignore
 
 
-def ykman_command(interfaces, *args, **kwargs):
+def ckman_command(interfaces, *args, **kwargs):
     return click.command(
         cls=_YkmanCommand,
         *args,

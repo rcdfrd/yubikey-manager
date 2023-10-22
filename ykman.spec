@@ -38,7 +38,7 @@ def Entrypoint(dist, group, name, **kwargs):
 block_cipher = None
 
 
-a = Entrypoint("canokey-manager", "console_scripts", "ykman")
+a = Entrypoint("canokey-manager", "console_scripts", "ckman")
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(
@@ -46,14 +46,14 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name="ykman",
+    name="ckman",
     icon="NONE",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
     console=True,
-    manifest="ykman.exe.manifest",
+    manifest="ckman.exe.manifest",
 )
 coll = COLLECT(
     exe,
@@ -63,5 +63,5 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name="ykman",
+    name="ckman",
 )

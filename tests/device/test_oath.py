@@ -9,7 +9,7 @@ from yubikit.oath import (
     HASH_ALGORITHM,
     OATH_TYPE,
 )
-from ykman.device import is_fips_version
+from ckman.device import is_fips_version
 from . import condition
 
 

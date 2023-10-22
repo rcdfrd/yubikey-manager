@@ -61,7 +61,7 @@ from ..piv import (
     generate_csr,
 )
 from .util import (
-    ykman_group,
+    ckman_group,
     cli_fail,
     click_force_option,
     click_format_option,
@@ -161,7 +161,7 @@ click_hash_option = click.option(
 )
 
 
-@ykman_group(SmartCardConnection)
+@ckman_group(SmartCardConnection)
 @click.pass_context
 @click_postpone_execution
 def piv(ctx):
@@ -173,16 +173,16 @@ def piv(ctx):
     \b
       Generate an ECC P-256 private key and a self-signed certificate in
       slot 9a:
-      $ ykman piv keys generate --algorithm ECCP256 9a pubkey.pem
-      $ ykman piv certificates generate --subject "CN=yubico" 9a pubkey.pem
+      $ ckman piv keys generate --algorithm ECCP256 9a pubkey.pem
+      $ ckman piv certificates generate --subject "CN=yubico" 9a pubkey.pem
 
     \b
       Change the PIN from 123456 to 654321:
-      $ ykman piv access change-pin --pin 123456 --new-pin 654321
+      $ ckman piv access change-pin --pin 123456 --new-pin 654321
 
     \b
       Reset all PIV data and restore default settings:
-      $ ykman piv reset
+      $ ckman piv reset
     """
     session = PivSession(ctx.obj["conn"])
     ctx.obj["session"] = session
@@ -955,15 +955,15 @@ def objects():
 
     \b
       Write the contents of a file to data object with ID: abc123:
-      $ ykman piv objects import abc123 myfile.txt
+      $ ckman piv objects import abc123 myfile.txt
 
     \b
       Read the contents of the data object with ID: abc123 into a file:
-      $ ykman piv objects export abc123 myfile.txt
+      $ ckman piv objects export abc123 myfile.txt
 
     \b
       Generate a random value for CHUID:
-      $ ykman piv objects generate chuid
+      $ ckman piv objects generate chuid
     """
 
 

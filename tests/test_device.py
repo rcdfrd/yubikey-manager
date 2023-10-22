@@ -1,5 +1,5 @@
-from ykman.device import get_name
-from ykman.base import YUBIKEY
+from ckman.device import get_name
+from ckman.base import YUBIKEY
 from yubikit.core import TRANSPORT
 from yubikit.management import (
     CAPABILITY,

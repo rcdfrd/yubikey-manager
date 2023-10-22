@@ -28,7 +28,7 @@
 from binascii import a2b_hex
 from yubikit.core import AID
 from yubikit.core.smartcard import SmartCardConnection, SmartCardProtocol, ApduError, SW
-from .util import EnumChoice, ykman_command
+from .util import EnumChoice, ckman_command
 from typing import Tuple, Optional
 
 import re
@@ -85,7 +85,7 @@ def _print_response(resp: bytes, sw: int, no_pretty: bool) -> None:
             )
 
 
-@ykman_command(SmartCardConnection, hidden="--full-help" not in sys.argv)
+@ckman_command(SmartCardConnection, hidden="--full-help" not in sys.argv)
 @click.pass_context
 @click.option(
     "-x", "--no-pretty", is_flag=True, help="Print only the hex output of a response"
@@ -114,17 +114,17 @@ def apdu(ctx, no_pretty, app, apdu, send_apdu):
     \b
       Select the OATH application, send a LIST instruction (0xA1), and make sure we get
       sw=9000 (these are equivalent):
-      $ ykman apdu a40400:a000000527210101=9000 a1=9000
+      $ ckman apdu a40400:a000000527210101=9000 a1=9000
         or
-      $ ykman apdu -a oath a1=
+      $ ckman apdu -a oath a1=
 
     \b
       Factory reset the OATH application:
-      $ ykman apdu -a oath 04dead
+      $ ckman apdu -a oath 04dead
         or
-      $ ykman apdu a40400:a000000527210101 04dead
+      $ ckman apdu a40400:a000000527210101 04dead
         or (using full-apdu mode)
-      $ ykman apdu -s 00a4040008a000000527210101 -s 0004dead
+      $ ckman apdu -s 00a4040008a000000527210101 -s 0004dead
     """
     if apdu and send_apdu:
         ctx.fail("Cannot mix positional APDUs and -s/--send-apdu.")

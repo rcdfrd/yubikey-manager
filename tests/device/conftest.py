@@ -1,5 +1,5 @@
-from ykman.device import connect_to_device, list_all_devices, read_info
-from ykman.pcsc import list_devices
+from ckman.device import connect_to_device, list_all_devices, read_info
+from ckman.pcsc import list_devices
 from yubikit.core import TRANSPORT
 from yubikit.core.otp import OtpConnection
 from yubikit.core.fido import FidoConnection

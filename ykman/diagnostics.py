@@ -1,4 +1,4 @@
-from . import __version__ as ykman_version
+from . import __version__ as ckman_version
 from .logging_setup import log_sys_info
 from .pcsc import list_readers, list_devices as list_ccid_devices
 from .hid import list_otp_devices, list_ctap_devices
@@ -173,7 +173,7 @@ def fido_info():
 
 def get_diagnostics():
     lines = []
-    lines.append(f"ykman: {ykman_version}")
+    lines.append(f"ckman: {ckman_version}")
     log_sys_info(lines.append)
     lines.append("")
 

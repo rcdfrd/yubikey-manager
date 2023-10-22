@@ -45,7 +45,7 @@ from yubikit.core.otp import (
 )
 
 from .util import (
-    ykman_group,
+    ckman_group,
     cli_fail,
     click_force_option,
     click_callback,
@@ -111,7 +111,7 @@ def _failed_to_write_msg(ctx, exc_info):
     logger.error("Failed to write to device", exc_info=exc_info)
     cli_fail(
         "Failed to write to the YubiKey. Make sure the device does not "
-        'have restricted access (see "ykman otp --help" for more info).'
+        'have restricted access (see "ckman otp --help" for more info).'
     )
 
 
@@ -124,7 +124,7 @@ def _confirm_slot_overwrite(slot_state, slot):
         )
 
 
-@ykman_group(OtpConnection)
+@ckman_group(OtpConnection)
 @click.pass_context
 @click_postpone_execution
 @click.option(
@@ -151,23 +151,23 @@ def otp(ctx, access_code):
 
     \b
       Swap the configurations between the two slots:
-      $ ykman otp swap
+      $ ckman otp swap
 
     \b
       Program a random challenge-response credential to slot 2:
-      $ ykman otp chalresp --generate 2
+      $ ckman otp chalresp --generate 2
 
     \b
       Program a Yubico OTP credential to slot 1, using the serial as public id:
-      $ ykman otp yubiotp 1 --serial-public-id
+      $ ckman otp yubiotp 1 --serial-public-id
 
     \b
       Program a random 38 characters long static password to slot 2:
-      $ ykman otp static --generate 2 --length 38
+      $ ckman otp static --generate 2 --length 38
 
     \b
       Remove a currently set access code from slot 2):
-      $ ykman otp --access-code 0123456789ab settings 2 --delete-access-code
+      $ ckman otp --access-code 0123456789ab settings 2 --delete-access-code
     """
 
     ctx.obj["session"] = YubiOtpSession(ctx.obj["conn"])
@@ -424,7 +424,7 @@ def yubiotp(
                 public_id,
                 private_id,
                 serial=info.serial,
-                user_agent="ykman/" + __version__,
+                user_agent="ckman/" + __version__,
             )
             click.echo("Upload to YubiCloud initiated successfully.")
         except PrepareUploadFailed as e:
@@ -827,7 +827,7 @@ def settings(
     if delete_access_code and not ctx.obj["access_code"]:
         cli_fail(
             "--delete-access-code used without providing an access code "
-            '(see "ykman otp --help" for more info).'
+            '(see "ckman otp --help" for more info).'
         )
 
     if not session.get_config_state().is_configured(slot):

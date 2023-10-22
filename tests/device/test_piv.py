@@ -20,7 +20,7 @@ from yubikit.piv import (
     MANAGEMENT_KEY_TYPE,
     InvalidPinError,
 )
-from ykman.piv import (
+from ckman.piv import (
     check_key,
     get_pivman_data,
     get_pivman_protected_data,
@@ -28,8 +28,8 @@ from ykman.piv import (
     generate_csr,
     pivman_set_mgm_key,
 )
-from ykman.util import parse_certificates, parse_private_key
-from ykman.device import is_fips_version
+from ckman.util import parse_certificates, parse_private_key
+from ckman.device import is_fips_version
 from ..util import open_file
 from . import condition
 

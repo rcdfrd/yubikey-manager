@@ -1,4 +1,4 @@
-from ykman.device import connect_to_device
+from ckman.device import connect_to_device
 from yubikit.core import TRANSPORT
 from yubikit.core.otp import OtpConnection
 from yubikit.core.fido import FidoConnection
