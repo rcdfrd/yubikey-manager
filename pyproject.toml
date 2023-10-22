@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "yubikey-manager"
+name = "canokey-manager"
 version = "4.0.9"
 description = "Tool for managing your YubiKey configuration."
 authors = ["Dain Nilsson <dain@yubico.com>"]
 license = "BSD"
-homepage = "https://github.com/Yubico/yubikey-manager"
-repository = "https://github.com/Yubico/yubikey-manager"
-keywords = ["yubikey", "yubiotp", "piv", "fido"]
+homepage = "https://github.com/canokeys/canokey-manager"
+repository = "https://github.com/canokeys/canokey-manager"
+keywords = ["canokey", "piv", "fido"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: End Users/Desktop",
