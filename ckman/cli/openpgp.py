@@ -39,7 +39,7 @@ from .util import (
     EnumChoice,
 )
 
-from yubikit.core.smartcard import ApduError, SW, SmartCardConnection
+from canokit.core.smartcard import ApduError, SW, SmartCardConnection
 
 logger = logging.getLogger(__name__)
 

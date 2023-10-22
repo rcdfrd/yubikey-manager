@@ -2,7 +2,7 @@ from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.asymmetric import ec
-from yubikit.core import NotSupportedError
+from canokit.core import NotSupportedError
 from .util import DEFAULT_PIN, DEFAULT_MANAGEMENT_KEY
 from ... import condition
 import tempfile

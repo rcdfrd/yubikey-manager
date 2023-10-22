@@ -1,9 +1,9 @@
 import pytest
 
-from yubikit.core import AID
-from yubikit.core.smartcard import ApduError, SW
-from yubikit.management import CAPABILITY
-from yubikit.oath import (
+from canokit.core import AID
+from canokit.core.smartcard import ApduError, SW
+from canokit.management import CAPABILITY
+from canokit.oath import (
     OathSession,
     CredentialData,
     HASH_ALGORITHM,

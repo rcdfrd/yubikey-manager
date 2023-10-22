@@ -1,5 +1,5 @@
-from yubikit.management import CAPABILITY
-from yubikit.core import NotSupportedError
+from canokit.management import CAPABILITY
+from canokit.core import NotSupportedError
 from ....util import open_file
 from ... import condition
 import pytest

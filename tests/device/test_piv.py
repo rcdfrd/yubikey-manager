@@ -7,10 +7,10 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric import rsa, ec, padding
 
-from yubikit.core import AID, NotSupportedError
-from yubikit.core.smartcard import ApduError
-from yubikit.management import CAPABILITY
-from yubikit.piv import (
+from canokit.core import AID, NotSupportedError
+from canokit.core.smartcard import ApduError
+from canokit.management import CAPABILITY
+from canokit.piv import (
     PivSession,
     ALGORITHM,
     KEY_TYPE,

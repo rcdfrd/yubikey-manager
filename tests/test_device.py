@@ -1,7 +1,7 @@
 from ckman.device import get_name
 from ckman.base import YUBIKEY
-from yubikit.core import TRANSPORT
-from yubikit.management import (
+from canokit.core import TRANSPORT
+from canokit.management import (
     CAPABILITY,
     FORM_FACTOR,
     DeviceInfo,

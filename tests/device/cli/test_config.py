@@ -1,5 +1,5 @@
-from yubikit.core import TRANSPORT
-from yubikit.management import CAPABILITY
+from canokit.core import TRANSPORT
+from canokit.management import CAPABILITY
 from ckman.base import YUBIKEY
 from .. import condition
 

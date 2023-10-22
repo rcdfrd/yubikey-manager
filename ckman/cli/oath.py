@@ -39,8 +39,8 @@ from .util import (
     prompt_timeout,
     EnumChoice,
 )
-from yubikit.core.smartcard import ApduError, SW, SmartCardConnection
-from yubikit.oath import (
+from canokit.core.smartcard import ApduError, SW, SmartCardConnection
+from canokit.oath import (
     OathSession,
     CredentialData,
     OATH_TYPE,

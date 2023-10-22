@@ -2,8 +2,8 @@ import os
 
 from cryptography.hazmat.primitives import serialization
 from ....util import generate_self_signed_certificate
-from yubikit.core import Tlv
-from yubikit.piv import OBJECT_ID, SLOT
+from canokit.core import Tlv
+from canokit.piv import OBJECT_ID, SLOT
 import contextlib
 import io
 import pytest

@@ -1,10 +1,10 @@
 from ckman.device import connect_to_device, list_all_devices, read_info
 from ckman.pcsc import list_devices
-from yubikit.core import TRANSPORT
-from yubikit.core.otp import OtpConnection
-from yubikit.core.fido import FidoConnection
-from yubikit.core.smartcard import SmartCardConnection
-from yubikit.management import USB_INTERFACE
+from canokit.core import TRANSPORT
+from canokit.core.otp import OtpConnection
+from canokit.core.fido import FidoConnection
+from canokit.core.smartcard import SmartCardConnection
+from canokit.management import USB_INTERFACE
 from functools import partial
 from . import condition
 

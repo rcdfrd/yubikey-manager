@@ -1,9 +1,9 @@
 from ckman.device import connect_to_device
-from yubikit.core import TRANSPORT
-from yubikit.core.otp import OtpConnection
-from yubikit.core.fido import FidoConnection
-from yubikit.core.smartcard import SmartCardConnection
-from yubikit.management import USB_INTERFACE
+from canokit.core import TRANSPORT
+from canokit.core.otp import OtpConnection
+from canokit.core.fido import FidoConnection
+from canokit.core.smartcard import SmartCardConnection
+from canokit.management import USB_INTERFACE
 from . import condition
 
 

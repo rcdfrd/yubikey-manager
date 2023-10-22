@@ -25,8 +25,8 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-from yubikit.core import TRANSPORT
-from yubikit.management import (
+from canokit.core import TRANSPORT
+from canokit.management import (
     ManagementSession,
     DeviceConfig,
     CAPABILITY,

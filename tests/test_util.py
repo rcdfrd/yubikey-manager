@@ -1,8 +1,8 @@
 #  vim: set fileencoding=utf-8 :
 
-from yubikit.core import Tlv, bytes2int
-from yubikit.core.otp import modhex_encode, modhex_decode
-from yubikit.management import FORM_FACTOR
+from canokit.core import Tlv, bytes2int
+from canokit.core.otp import modhex_encode, modhex_decode
+from canokit.management import FORM_FACTOR
 from ckman.util import is_pkcs12, is_pem, parse_private_key, parse_certificates
 from ckman.util import _parse_pkcs12_pyopenssl, _parse_pkcs12_cryptography
 from ckman.otp import format_oath_code, generate_static_pw, time_challenge

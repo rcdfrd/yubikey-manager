@@ -27,7 +27,7 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-from yubikit.management import CAPABILITY
+from canokit.management import CAPABILITY
 from .. import condition
 from time import sleep
 

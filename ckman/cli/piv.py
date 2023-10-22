@@ -25,9 +25,9 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-from yubikit.core import NotSupportedError
-from yubikit.core.smartcard import SmartCardConnection
-from yubikit.piv import (
+from canokit.core import NotSupportedError
+from canokit.core.smartcard import SmartCardConnection
+from canokit.piv import (
     PivSession,
     InvalidPinError,
     KEY_TYPE,
@@ -38,7 +38,7 @@ from yubikit.piv import (
     TOUCH_POLICY,
     DEFAULT_MANAGEMENT_KEY,
 )
-from yubikit.core.smartcard import ApduError, SW
+from canokit.core.smartcard import ApduError, SW
 
 from ..util import (
     get_leaf_certificates,

@@ -10,11 +10,11 @@ dist/
 .ropeproject/
 ChangeLog
 MANIFEST
-ykman/gui/qt_resources.py
-ykman-gui-script.py
-ykman-gui.pkg
-ykman-script.py
-ykman.pkg
+ckman/gui/qt_resources.py
+ckman-gui-script.py
+ckman-gui.pkg
+ckman-script.py
+ckman.pkg
 lib/
 
 # Libraries unpacked by Windows VM

@@ -26,7 +26,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 from base64 import b32encode
-from yubikit.yubiotp import (
+from canokit.yubiotp import (
     SLOT,
     NDEF_TYPE,
     YubiOtpSession,
@@ -36,8 +36,8 @@ from yubikit.yubiotp import (
     HotpSlotConfiguration,
     UpdateConfiguration,
 )
-from yubikit.core import TRANSPORT, CommandError
-from yubikit.core.otp import (
+from canokit.core import TRANSPORT, CommandError
+from canokit.core.otp import (
     MODHEX_ALPHABET,
     modhex_encode,
     modhex_decode,

@@ -35,8 +35,8 @@ from fido2.ctap2 import (
     CaptureError,
 )
 from fido2.pcsc import CtapPcscDevice
-from yubikit.core.fido import FidoConnection
-from yubikit.core.smartcard import SW
+from canokit.core.fido import FidoConnection
+from canokit.core.smartcard import SW
 from time import sleep
 from .util import (
     click_postpone_execution,

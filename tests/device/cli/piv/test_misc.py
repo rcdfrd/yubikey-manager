@@ -1,4 +1,4 @@
-from yubikit.piv import OBJECT_ID
+from canokit.piv import OBJECT_ID
 import pytest
 
 

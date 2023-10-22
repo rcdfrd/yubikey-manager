@@ -1,4 +1,4 @@
-from yubikit.core import TRANSPORT
+from canokit.core import TRANSPORT
 from ckman.cli.__main__ import cli
 from ckman.cli.aliases import apply_aliases
 from click.testing import CliRunner

@@ -1,13 +1,13 @@
-from yubikit.core import TRANSPORT
-from yubikit.core.otp import OtpConnection
-from yubikit.core.smartcard import SmartCardConnection
-from yubikit.yubiotp import (
+from canokit.core import TRANSPORT
+from canokit.core.otp import OtpConnection
+from canokit.core.smartcard import SmartCardConnection
+from canokit.yubiotp import (
     YubiOtpSession,
     SLOT,
     HmacSha1SlotConfiguration,
     StaticPasswordSlotConfiguration,
 )
-from yubikit.management import CAPABILITY, ManagementSession
+from canokit.management import CAPABILITY, ManagementSession
 from ckman.device import connect_to_device
 from . import condition
 import pytest

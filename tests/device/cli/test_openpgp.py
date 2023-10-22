@@ -1,4 +1,4 @@
-from yubikit.management import CAPABILITY
+from canokit.management import CAPABILITY
 from .. import condition
 import pytest
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from ckman.oath import STEAM_CHAR_TABLE
-from yubikit.management import CAPABILITY
+from canokit.management import CAPABILITY
 from .. import condition
 from base64 import b32encode
 import contextlib

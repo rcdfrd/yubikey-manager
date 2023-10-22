@@ -25,11 +25,11 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-from yubikit.core import ApplicationNotAvailableError
-from yubikit.core.otp import OtpConnection
-from yubikit.core.fido import FidoConnection
-from yubikit.core.smartcard import SmartCardConnection
-from yubikit.management import USB_INTERFACE
+from canokit.core import ApplicationNotAvailableError
+from canokit.core.otp import OtpConnection
+from canokit.core.fido import FidoConnection
+from canokit.core.smartcard import SmartCardConnection
+from canokit.management import USB_INTERFACE
 
 import ckman.logging_setup
 
