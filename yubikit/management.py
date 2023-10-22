@@ -360,6 +360,7 @@ class _ManagementOtpBackend(_Backend):
     def write_config(self, config):
         self.protocol.send_and_receive(SLOT_YK4_SET_DEVICE_INFO, config)
 
+ADMIN_INS_READ_VERSION = 0x31
 
 INS_READ_CONFIG = 0x1D
 INS_WRITE_CONFIG = 0x1C
@@ -375,7 +376,8 @@ class _ManagementSmartCardBackend(_Backend):
             # YubiKey Edge incorrectly appends SW twice.
             select_bytes = select_bytes[:-2]
         select_str = select_bytes.decode()
-        self.version = Version.from_string(select_str)
+        # self.version = Version.from_string(select_str)
+        self.version = Version.from_string(self.protocol.send_apdu(0, ADMIN_INS_READ_VERSION, 0, 0).decode())
         # For YubiKey NEO, we use the OTP application for further commands
         if self.version[0] == 3:
             # Workaround to "de-select" on NEO, otherwise it gets stuck.
