@@ -49,8 +49,9 @@ CK_READER_NAME = "canokey"
 
 # Figure out what the PID should be based on the reader name
 def _pid_from_name(name):
-    if YK_READER_NAME not in name.lower() and \
-        CK_READER_NAME not in name.lower():
+    name = name.lower()
+    if YK_READER_NAME not in name and \
+        CK_READER_NAME not in name:
         return None
 
     interfaces = USB_INTERFACE(0)
@@ -58,12 +59,12 @@ def _pid_from_name(name):
         if iface.name in name:
             interfaces |= iface
 
-    if "U2F" in name:
+    if "u2f" in name:
         interfaces |= USB_INTERFACE.FIDO
-    if "Canokey" in name:
+    if "canokey" in name:
         interfaces |= USB_INTERFACE.FIDO | USB_INTERFACE.CCID
 
-    key_type = YUBIKEY.CK if "Canokey" in name else YUBIKEY.NEO if "NEO" in name else YUBIKEY.YK4
+    key_type = YUBIKEY.CK if "canokey" in name else YUBIKEY.NEO if "neo" in name else YUBIKEY.YK4
     return key_type.get_pid(interfaces)
 
 
