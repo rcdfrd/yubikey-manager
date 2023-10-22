@@ -1,0 +1,15 @@
+ckman
+python 3.8.18 (https://github.com/adang1345/PythonWindows)
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+scoop install swig git
+git clone https://github.com/rcdfrd/yubikey-manager.git
+cd yubikey-manager
+pip install poetry
+poetry install
+poetry run ckman
+poetry run pytest -v
+poetry build
+poetry run pyinstaller ckman.spec
+dist/ckman/ckman.exe --version
